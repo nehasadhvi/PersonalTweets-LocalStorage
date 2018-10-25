@@ -32,11 +32,15 @@ function newTweet(e) {
     tweetList.appendChild(li);
 
     addToLocalStorage(tweet);
+
+    alert('Tweet Added');
+    this.reset();
 }
 
 function removeTweet(e) {
     if(e.target.classList.contains('remove-tweet')) {
-        console.log(e.target.parentElement.remove());
+        e.target.parentElement.remove();
+        removeFromLocalStorage(e.target.parentElement.textContent);
     }
 }
 
@@ -71,5 +75,15 @@ function loadLocalStorage() {
 
         tweetList.appendChild(li);
     });
+}
 
+function removeFromLocalStorage(tweet) {
+    let tweets = getFromLocalStorage();
+    tweetDelete = tweet.substring(0, tweet.length-1);
+    tweets.forEach((tweetLS, index) => {
+        if(tweetDelete == tweetLS) {
+            tweets.splice(index, 1);
+        }
+    });
+    localStorage.setItem('tweets', JSON.stringify(tweets));
 }
