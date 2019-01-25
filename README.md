@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 You need to clone this repository via SSH or HTTPS link provided by GitHub using terminal :
 ```
-git@github.com:nehasadhvi/PersonalTweets-LocalStorage.git
+git clone git@github.com:nehasadhvi/PersonalTweets-LocalStorage.git
 ```
 or
 ```
