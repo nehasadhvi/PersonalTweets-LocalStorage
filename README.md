@@ -21,7 +21,7 @@ Now, after succesfully cloning the repo, to run the application on your local co
 
 This will make your application run on PORT 5500, if in use, on next available port.
 
-Happy Shopping ! ;)
+Happy Tweeting ! ;)
 
 ### Prerequisites
 
